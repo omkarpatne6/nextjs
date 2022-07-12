@@ -1,6 +1,6 @@
 import connect from "../../util/dbconnect";
 import Mydata from "../../models/Next"
-import type { NextApiRequest, NextApiResponse } from 'next'
+import { NextApiRequest, NextApiResponse } from 'next'
 
 connect()
 
