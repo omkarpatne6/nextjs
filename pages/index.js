@@ -3,23 +3,23 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 
-const Home = () => {
+export async function getStaticProps(context) {
 
-  const [state, newState] = useState([]);
+  const response = await fetch("api/fetch");
+  const data = await response.json();
 
-  useEffect(() => {
-    const fetched = async () => {
-      const response = await fetch("api/fetch");
-      const data = await response.json();
+  console.log(data);
 
-      console.log(data);
+  newState(data)
 
-      newState(data)
-
+  return {
+    props: {
+      data
     }
+  }
+}
 
-    fetched()
-  }, [])
+const Home = ({data}) => {
 
   return (
     <div className={styles.container}>
