@@ -3,7 +3,7 @@ import Mydata from "../../models/Next";
 
 connect()
 
-export default async function handler(req, res) {
+export default async function (req, res) {
 
     const { method } = req
 
