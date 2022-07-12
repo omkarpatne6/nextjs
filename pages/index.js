@@ -4,7 +4,12 @@ import { useState, useEffect } from 'react'
 
 const Home = () => {
 
+<<<<<<< HEAD
   const [state, newState] = useState([]);
+=======
+  const response = await fetch("https://nextjs-cwe154gqm-omkarpatne6.vercel.app/api/fetch");
+  const data = await response.json();
+>>>>>>> af7016059e85e4b584bab298263af6ff972c6600
 
   useEffect(() => {
     const fetched = async () => {
