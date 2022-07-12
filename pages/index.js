@@ -23,7 +23,7 @@ const Home = () => {
   return (
     <div className={styles.container}>
 
-      <h1><Link href="/details"><a>Click me</a></Link></h1>
+      <h1><Link href="/details"><a>Click me here</a></Link></h1>
 
       <ul>
         {state.map((item, index) => {
