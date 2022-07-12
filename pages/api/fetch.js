@@ -2,7 +2,7 @@ import connect from "../../util/dbconnect";
 
 connect()
 
-export default function (req, res) {
+export default function handler(req, res) {
 
     res.json({ name : "omkar patne"})
 };
