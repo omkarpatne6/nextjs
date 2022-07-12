@@ -1,9 +1,10 @@
 import connect from "../../util/dbconnect";
 import Mydata from "../../models/Next"
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 connect()
 
-export default async function userHandler(req, res) {
+export default async function userHandler(req: NextApiRequest, res: NextApiResponse) {
 
     const { method } = req
 
