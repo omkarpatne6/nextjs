@@ -3,7 +3,7 @@ import Mydata from "../../models/Next"
 
 connect()
 
-export default async (req, res) => {
+const fetch = async (req, res) => {
 
     const { method } = req
 
@@ -26,3 +26,5 @@ export default async (req, res) => {
         }
     }
 };
+
+export default fetch
