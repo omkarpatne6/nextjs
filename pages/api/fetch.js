@@ -1,8 +1,6 @@
-import connect from "../../util/dbconnect";
-
-connect()
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 export default function handler(req, res) {
-
-    res.json({ name : "omkar patne"})
-};
+    res.status(200).json({ name: 'John Doe' })
+  }
+  
