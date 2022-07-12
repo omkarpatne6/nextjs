@@ -1,23 +1,24 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
-export async function getStaticProps(context) {
+const Home = () => {
 
-  const response = await fetch("api/fetch");
-  const data = await response.json();
+  const [state, newState] = useState([]);
 
-  console.log(data);
+  useEffect(() => {
+    const fetched = async () => {
+      const response = await fetch("api/fetch");
+      const data = await response.json();
 
-  newState(data)
+      console.log(data);
 
-  return {
-    props: {
-      data
+      newState(data)
+
     }
-  }
-}
 
-const Home = ({data}) => {
+    fetched()
+  }, [])
 
   return (
     <div className={styles.container}>
@@ -25,7 +26,7 @@ const Home = ({data}) => {
       <h1><Link href="/details"><a>Click me</a></Link></h1>
 
       <ul>
-        {data.map((item, index) => {
+        {state.map((item, index) => {
           return <li key={index}>{item.name}</li>
         })}
       </ul>
