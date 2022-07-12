@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function getStaticProps(context) {
 
-  const response = await fetch("api/fetch");
+  const response = await fetch("https://nextjs-cwe154gqm-omkarpatne6.vercel.app/api/fetch");
   const data = await response.json();
 
   console.log(data);
