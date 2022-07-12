@@ -27,7 +27,7 @@ const Home = ({data}) => {
       <h1><Link href="/details"><a>Click me</a></Link></h1>
 
       <ul>
-        {state.map((item, index) => {
+        {data.map((item, index) => {
           return <li key={index}>{item.name}</li>
         })}
       </ul>
