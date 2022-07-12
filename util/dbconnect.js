@@ -7,7 +7,7 @@ const connect = async () => {
         return;
     }
 
-    const db = await mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true, useUnifiedTopology: true});
+    const db = await mongoose.connect("mongodb+srv://omkar:omkar123@test.ynj89.mongodb.net/nextjs?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
     connection.isConnected = db.connections[0].readyState;
 
