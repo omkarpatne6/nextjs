@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetched = async () => {
-      const response = await fetch("api/fetch");
+      const response = await fetch("/api/fetch");
       const data = await response.json();
 
       console.log(data);
